@@ -108,12 +108,10 @@ output.forEach((c) => {
 });
 
 // calc size of directories
-interface DirSize {
+const sizes: {
   path: string;
   size: number;
-}
-
-const sizes: DirSize[] = [];
+}[] = [];
 
 function walkTree(node: TreeNode) {
   const fileSum = node.children
